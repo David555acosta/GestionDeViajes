@@ -19,13 +19,13 @@ namespace EmpresaViajes
         public int Paradas {  get; set; }
 
         //Constructor 
-        public ViajeEnBus(string unDestino, int unaDuracion, decimal unCostoBase, int unaCantParadas, int idUnico) : base()
+        public ViajeEnBus(string unDestino, int unaDuracion, decimal unCostoBase, int unaCantParadas, int IdUnico) : base()
         {
             this.Destino = unDestino;
             this.Duracion = unaDuracion;
             this.CostoBase = unCostoBase;
             this.Paradas = unaCantParadas;
-            this.IdUnico = idUnico;  
+            this.IdUnico = IdUnico;  
         }
 
 

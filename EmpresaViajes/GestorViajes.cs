@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmpresaViajes
 {
@@ -13,39 +10,44 @@ namespace EmpresaViajes
         // Metodo para agregar un viaje a la lista.
         public void AgregarViaje(Viaje unViaje)
         {
-            if (noEstaEnLista_(unViaje))
+            if (!NoEstaEnLista_(unViaje))
             {
                 listaDeViajes.Add(unViaje);
 
-            } else
+            }
+            else
             {
-                throw new ArgumentException("No se puede agregar un viaje que ya esta en la lista");
+                Console.WriteLine("Cagada");
             }
         }
 
 
         //Metodo para evaluar si un viaje esta en la lista de viajes.
-        public bool noEstaEnLista_(Viaje unViajeX)
+        public bool NoEstaEnLista_(Viaje unViajeX)
         {
             foreach (Viaje viaje in listaDeViajes)
             {
                 if (viaje.IdUnico == unViajeX.IdUnico)
                 {
-                    return false;
-                } 
+                    return true;
+                }
             }
 
-            return true;
+            return false;
         }
 
 
         //Metodo para mostrar todos los viajes de la lista de viajes.
 
-        public void MostrarDetalles ()
+        public void MostrarElementoDeLista()
         {
+            int indice = 0;
+
             foreach (Viaje viaje in listaDeViajes)
             {
-                Console.WriteLine(viaje.MostrarDetalles());
+                Console.WriteLine($"{indice + 1 }) {viaje.MostrarDetalles()}");
+
+                indice++;   
             }
         }
     }

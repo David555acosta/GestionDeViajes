@@ -54,16 +54,25 @@ namespace EmpresaViajes
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             ViajeEnAvion viajeRaul = new ViajeEnAvion("Florianopolis", 7, 200, "Economica" ,234);
             ViajeEnAvion viajeDavid = new ViajeEnAvion("Cancun" , 5 , 300.55m , "Ejecutiva" , 156);
             ViajeEnBarco ViajeJose = new ViajeEnBarco("Bahamas", 21, 400, "Interior" , 777);  
             ViajeEnBus ViajeRogelio = new ViajeEnBus("Misiones", 7, 5000, 3 , 555);
-       
 
-           //Metodo para recorrer cada elemento de la lista y mostrar los detalles de cada viaje.
-            
+
+            //Metodo para recorrer cada elemento de la lista y mostrar los detalles de cada viaje.
+
+
+            GestorViajes  GestorNuevo = new GestorViajes();
+
+            GestorNuevo.AgregarViaje(viajeRaul);
+            GestorNuevo.AgregarViaje(viajeDavid);
+            GestorNuevo.AgregarViaje(ViajeJose);
+            GestorNuevo.AgregarViaje(ViajeRogelio);
+
+            GestorNuevo.MostrarElementoDeLista();
         }
     }
 }

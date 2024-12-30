@@ -19,20 +19,21 @@ namespace EmpresaViajes
         public string TipoCabina { get; set; }
 
         //Constructor 
-        public ViajeEnBarco(string unDestino, int unaDuracion, decimal unCostoBase, string unaCabina, int idUnico) : base()
+        public ViajeEnBarco(string unDestino, int unaDuracion, decimal unCostoBase, string unaCabina, int IdUnico) : base()
         {
             this.Destino = unDestino;
             this.Duracion = unaDuracion;
             this.CostoBase = unCostoBase;
             this.TipoCabina = unaCabina;
-            this.IdUnico = idUnico;
+            this.IdUnico = IdUnico;
         }
 
 
         //Metodo de interfaz.
         public override decimal CalcularCostoTotal()
         {
-            decimal recargo = 0;
+            decimal recargo;
+
             switch (TipoCabina)
             {
                 case "Interior":

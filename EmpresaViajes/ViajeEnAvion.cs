@@ -19,7 +19,7 @@ namespace EmpresaViajes
 
 
         //Constructor 
-        public ViajeEnAvion(string unDestino, int unaDuracion, decimal unCostoBase , string unaClase , int idUnico) : base()
+        public ViajeEnAvion(string unDestino, int unaDuracion, decimal unCostoBase , string unaClase , int IdUnico) : base()
         {
             this.Destino = unDestino;
             this.Duracion = unaDuracion;
@@ -32,7 +32,8 @@ namespace EmpresaViajes
         //Metodo de interfaz.
         public override decimal CalcularCostoTotal()
         {
-            decimal recargo = 0;
+            decimal recargo;
+
             switch (ClaseVuelo)
             {
                 case "Economica":
