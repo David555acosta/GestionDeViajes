@@ -18,14 +18,14 @@ namespace EmpresaViajes
         public string ClaseVuelo { get; set; }
 
 
-        //Constructor 
-        public ViajeEnAvion(string unDestino, int unaDuracion, decimal unCostoBase , string unaClase , int IdUnico) : base()
+        public ViajeEnAvion(string unDestino, decimal unCostoBase, int unaDuracion, int IdUnico, string unaClaseVuelo) :
+             base(unDestino, unCostoBase, unaDuracion, IdUnico)
         {
             this.Destino = unDestino;
-            this.Duracion = unaDuracion;
             this.CostoBase = unCostoBase;
-            this.ClaseVuelo = unaClase;
+            this.Duracion = unaDuracion;
             this.IdUnico = IdUnico;
+            this.ClaseVuelo = unaClaseVuelo;
         }
 
 

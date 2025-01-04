@@ -51,9 +51,17 @@ namespace EmpresaViajes
         public int IdUnico { get; set; } //Agrego un id para hacer mas rapida las comparaciones en las listas.
 
 
+        //Constructor
+
+        public Viaje(string unDestino, decimal unCostoBase, int unaDuracion, int IdUnico)
+        {
+            this.Destino = unDestino;
+            this.Duracion = unaDuracion;
+            this.CostoBase = unCostoBase;
+            this.IdUnico = IdUnico;
+        }
+
         //Metodos:
-
-
 
         //Metodo para calcular el costo
 

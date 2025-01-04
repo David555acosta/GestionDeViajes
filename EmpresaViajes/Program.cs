@@ -56,10 +56,10 @@ namespace EmpresaViajes
     {
         static void Main()
         {
-            ViajeEnAvion viajeRaul = new ViajeEnAvion("Florianopolis", 7, 200, "Economica" ,234);
-            ViajeEnAvion viajeDavid = new ViajeEnAvion("Cancun" , 5 , 300.55m , "Ejecutiva" , 156);
-            ViajeEnBarco ViajeJose = new ViajeEnBarco("Bahamas", 21, 400, "Interior" , 777);  
-            ViajeEnBus ViajeRogelio = new ViajeEnBus("Misiones", 7, 5000, 3 , 555);
+            ViajeEnAvion viajeRaul = new ViajeEnAvion("Florianopolis" , 500.5m , 22 , 346 , "Economica");
+            ViajeEnAvion viajeDavid = new ViajeEnAvion("Roma" , 100.50m , 10 , 111 , "Primera Clase");
+            ViajeEnBarco ViajeJose = new ViajeEnBarco("Cancun" , 1000m , 28 , 655 , "Exterior");  
+            ViajeEnBus ViajeRogelio = new ViajeEnBus("Misiones" , 50000m , 7 , 555 , 10);
 
 
             //Metodo para recorrer cada elemento de la lista y mostrar los detalles de cada viaje.

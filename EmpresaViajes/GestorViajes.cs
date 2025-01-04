@@ -7,34 +7,34 @@ namespace EmpresaViajes
     {
         List<Viaje> listaDeViajes = new List<Viaje>();
 
-        // Metodo para agregar un viaje a la lista.
+
+        // Método para agregar un viaje a la lista.
         public void AgregarViaje(Viaje unViaje)
         {
-            if (!NoEstaEnLista_(unViaje))
+            if (!Viaje_EstaEnLista(unViaje)) // Cambié la condición a la inversa
             {
                 listaDeViajes.Add(unViaje);
-
             }
             else
             {
-                Console.WriteLine("Cagada");
+                throw new ArgumentException("No se puede agregar un viaje existente en la lista");
             }
         }
 
-
-        //Metodo para evaluar si un viaje esta en la lista de viajes.
-        public bool NoEstaEnLista_(Viaje unViajeX)
+        // Método para evaluar si un viaje está en la lista.
+        public bool Viaje_EstaEnLista(Viaje unViajeX)
         {
             foreach (Viaje viaje in listaDeViajes)
             {
                 if (viaje.IdUnico == unViajeX.IdUnico)
                 {
-                    return true;
+                    return true; // Devuelve true si el viaje ya está en la lista
                 }
             }
 
-            return false;
+            return false; // Devuelve false si no se encuentra el viaje
         }
+
 
 
         //Metodo para mostrar todos los viajes de la lista de viajes.
